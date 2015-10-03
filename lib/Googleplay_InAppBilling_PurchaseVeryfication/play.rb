@@ -19,7 +19,7 @@ module GoogleplayInAppBillingPurchaseVeryfication
         )
         client.authorization.fetch_access_token!
       end
-
+    end
 
       def self.verify(package_name, subscription_id, purchase_token)
         client = self.google_api_client
@@ -32,10 +32,6 @@ module GoogleplayInAppBillingPurchaseVeryfication
                                                          }).data
 
       end
-
-
-    end
-
 
   end
 end
