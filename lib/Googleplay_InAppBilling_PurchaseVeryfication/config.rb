@@ -16,7 +16,7 @@ module GoogleplayInAppBillingPurchaseVeryfication
       @app_name = secrets_config[Rails.env]['app_name'] || custum_config[Rails.env]['app_name']
       @app_version = secrets_config[Rails.env]['app_version'] || custum_config[Rails.env]['app_version']
       @refresh_token = secrets_config[Rails.env]['refresh_token'] || custum_config[Rails.env]['refresh_token']
-      @google_secrets = secrets_config[Rails.env]['google_secret'] || custum_config[Rails.env]['google_secret']
+      @google_secret = secrets_config[Rails.env]['google_secret'] || custum_config[Rails.env]['google_secret']
       @client_id = secrets_config[Rails.env]['client_id'] || custum_config[Rails.env]['client_id']
     end
 
