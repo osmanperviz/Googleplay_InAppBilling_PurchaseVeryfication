@@ -1,0 +1,19 @@
+development:
+  client_id:
+  google_secrets:
+  refresh_token:
+  app_name:
+  app_version:
+test:
+  client_id:
+  google_secrets:
+  refresh_token:
+  app_name:
+  app_version:
+
+production:
+  client_id: <%= CLIENT_ID %>
+  google_secrets: <%= GOOGLE_SECRETS %>
+  refresh_token: <%= REFRESH_TOKEN %>
+  app_name: <%= APP_NAME %>
+  app_version: <%= APP_VERSION %>
