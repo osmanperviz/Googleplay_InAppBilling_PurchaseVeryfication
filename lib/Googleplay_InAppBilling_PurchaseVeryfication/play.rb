@@ -20,6 +20,21 @@ module GoogleplayInAppBillingPurchaseVeryfication
         client.authorization.fetch_access_token!
       end
 
+
+      def self.verify!(package_name, subscription_id, purchase_token)
+
+        client = self.google_api_client
+        subscription = client.discovered_api('androidpublisher', 'v2')
+        api_method = subscription.purchases.products.get
+        purchases = client.execute(api_method: api_method, parameters: {
+                                                             "packageName"    => package_name,
+                                                             "productId"      => subscription_id,
+                                                             "token"          => purchase_token
+                                                         }).data
+
+      end
+
+
     end
 
 
