@@ -15,7 +15,7 @@ module GoogleplayInAppBillingPurchaseVeryfication
             :token_credential_uri => 'https://accounts.google.com/o/oauth2/token',
             :refresh_token => config.refresh_token,
             :client_id => config.client_id,
-            :client_secret => config.google_secrets
+            :client_secret => config.google_secret
         )
         client.authorization.fetch_access_token!
       end
