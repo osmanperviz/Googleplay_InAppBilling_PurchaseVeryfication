@@ -1,5 +1,7 @@
 require "Googleplay_InAppBilling_PurchaseVeryfication/version"
+require 'Googleplay_InAppBilling_PurchaseVeryfication/config'
+require 'Googleplay_InAppBilling_PurchaseVeryfication/play'
 
 module GoogleplayInAppBillingPurchaseVeryfication
-  # Your code goes here...
+
 end
