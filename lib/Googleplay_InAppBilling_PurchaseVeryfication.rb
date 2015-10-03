@@ -1,7 +1,7 @@
 require "Googleplay_InAppBilling_PurchaseVeryfication/version"
-require 'Googleplay_InAppBilling_PurchaseVeryfication/config'
 require 'Googleplay_InAppBilling_PurchaseVeryfication/play'
-require 'Googleplay_InAppBilling_PurchaseVeryfication/railtie'
+require 'Googleplay_InAppBilling_PurchaseVeryfication/config'
+require 'Googleplay_InAppBilling_PurchaseVeryfication/railtie' if defined?(Rails)
 
 module GoogleplayInAppBillingPurchaseVeryfication
 
