@@ -21,18 +21,18 @@ Or install it yourself as:
 ## Usage
 
    For this game you need to provide the following credentials:
-   * client_id,
-   * google_secret
-   * refresh_token
-   * app_name
-   * app_version
+           * client_id
+           * google_secret
+           * refresh_token
+           * app_name
+           * app_version
 
-   ## Rails version greater than 4.1
+## Rails version greater than 4.1
 
    Credentials will be placed in the  secrets.yml  file
 
 
-   ## Rails version less than 4.1
+## Rails version less than 4.1
 
    Just run "rake play_config" command  will generate under AppRoot/config google_play.yml file.
    Credentials will be placed in this file.
