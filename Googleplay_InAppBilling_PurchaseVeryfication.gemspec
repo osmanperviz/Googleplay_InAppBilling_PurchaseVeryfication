@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Osman Perviz"]
   spec.email         = ["osmanperviz@gmail.com"]
 
-  spec.summary       = %q{Some summury}
+  spec.summary       = %q{This(simple) gem handle Google Play In App Purchase Receipt Verification}
   spec.description   = %q{Some description}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/osmanperviz/Googleplay_InAppBilling_PurchaseVeryfication"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
