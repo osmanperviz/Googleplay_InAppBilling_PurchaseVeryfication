@@ -1,38 +1,75 @@
 # GoogleplayInAppBillingPurchaseVeryfication
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/Googleplay_InAppBilling_PurchaseVeryfication`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+This(simple) gem handle Google Play In App Purchase Receipt Verification, and retrieving the information associated with receipt data.
+Server-side verification over SSL is the most reliable way to determine the authenticity of purchasing records.
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+
 gem 'Googleplay_InAppBilling_PurchaseVeryfication'
-```
+
 
 And then execute:
 
-    $ bundle
+   $ bundle
 
 Or install it yourself as:
 
-    $ gem install Googleplay_InAppBilling_PurchaseVeryfication
+   $ gem install Googleplay_InAppBilling_PurchaseVeryfication
 
 ## Usage
 
-TODO: Write usage instructions here
+   For this game you need to provide the following credentials:
+   * client_id,
+   * google_secret
+   * refresh_token
+   * app_name
+   * app_version
 
-## Development
+   * Rails version greater than 4.1
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+   Credentials will be placed in the  secrets.yml  file
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+   * Rails version less than 4.1
+
+   Just run "rake play_config" command  will generate under AppRoot/config google_play.yml file.
+   Credentials will be placed in this file.
+
+
+  ## SIMPLE USAGE
+
+   receipt_data = 'base64 string from android app'
+
+   response = GoogleplayInAppBillingPurchaseVeryfication::Play.verify(package_name, subscription_id, receipt_data)
+
+   if response
+    success
+   else
+    error
+   end
+
+   rescue Exception => e
+      render json: {:message=> e.message},status: 400
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/Googleplay_InAppBilling_PurchaseVeryfication. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+*Fork the project.
+
+*Make your feature addition or bug fix.
+
+*Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+
+## Details
+
+Need more detail on how all of this works (especially the Android implementation)? Read Google's In-app Billing Docs.
+
+
+## Error
+
+
 
 
 ## License
