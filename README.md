@@ -36,7 +36,7 @@ Or install it yourself as:
 
   ## SIMPLE USAGE
 
-       receipt_data = 'base64 string from android app'
+       receipt_data = 'purchase_token from android app'
        response = GoogleplayInAppBillingPurchaseVeryfication::Play.verify(package_name, subscription_id, receipt_data)
        if !response['errors']
         success
