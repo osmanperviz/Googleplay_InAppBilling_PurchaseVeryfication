@@ -30,7 +30,7 @@ Or install it yourself as:
 
 ## Rails version less than 4.1
 
-   Just run "rake play_config" command  will generate under AppRoot/config google_play.yml file.
+   Just run "rake play_config" command  will generate under AppRoot/config/google_play.yml file.
    Credentials will be placed in this file.
 
 
@@ -38,7 +38,7 @@ Or install it yourself as:
 
        receipt_data = 'base64 string from android app'
        response = GoogleplayInAppBillingPurchaseVeryfication::Play.verify(package_name, subscription_id, receipt_data)
-       if response
+       if !response['errors']
         success
        else
         error
