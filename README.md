@@ -7,16 +7,16 @@ Server-side verification over SSL is the most reliable way to determine the auth
 Add this line to your application's Gemfile:
 
 
-gem 'Googleplay_InAppBilling_PurchaseVeryfication'
+    gem 'Googleplay_InAppBilling_PurchaseVeryfication'
 
 
 And then execute:
 
-   $ bundle
+     $ bundle
 
 Or install it yourself as:
 
-   $ gem install Googleplay_InAppBilling_PurchaseVeryfication
+    $ gem install Googleplay_InAppBilling_PurchaseVeryfication
 
 ## Usage
 
@@ -27,12 +27,12 @@ Or install it yourself as:
    * app_name
    * app_version
 
-   * Rails version greater than 4.1
+   ## Rails version greater than 4.1
 
    Credentials will be placed in the  secrets.yml  file
 
 
-   * Rails version less than 4.1
+   ## Rails version less than 4.1
 
    Just run "rake play_config" command  will generate under AppRoot/config google_play.yml file.
    Credentials will be placed in this file.
@@ -40,27 +40,24 @@ Or install it yourself as:
 
   ## SIMPLE USAGE
 
-   receipt_data = 'base64 string from android app'
-
-   response = GoogleplayInAppBillingPurchaseVeryfication::Play.verify(package_name, subscription_id, receipt_data)
-
-   if response
-    success
-   else
-    error
-   end
-
-   rescue Exception => e
-      render json: {:message=> e.message},status: 400
+       receipt_data = 'base64 string from android app'
+       response = GoogleplayInAppBillingPurchaseVeryfication::Play.verify(package_name, subscription_id, receipt_data)
+       if response
+        success
+       else
+        error
+       end
+       rescue Exception => e
+          render json: {:message=> e.message},status: 400
 
 
 ## Contributing
 
-*Fork the project.
+* Fork the project.
 
-*Make your feature addition or bug fix.
+* Make your feature addition or bug fix.
 
-*Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 
 ## Details
 
