@@ -21,11 +21,7 @@ Or install it yourself as:
 ## Usage
 
    For this game you need to provide the following credentials:
-           * client_id
-           * google_secret
-           * refresh_token
-           * app_name
-           * app_version
+   client_id , google_secret , refresh_token , app_name ,  app_version
 
 ## Rails version greater than 4.1
 
