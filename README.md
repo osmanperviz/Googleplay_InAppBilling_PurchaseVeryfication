@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-   For this game you need to provide the following credentials:
+   For this gem you need to provide the following credentials:
    client_id , google_secret , refresh_token , app_name ,  app_version
 
 ## Rails version greater than 4.1
@@ -61,6 +61,18 @@ Need more detail on how all of this works (especially the Android implementation
 
 
 ## Error
+ If you have ssl error in development just put this two lines of code
+
+            require 'openssl'
+            OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+
+ Be sure never to use this in any production environment, as it will negate benefits of using SSL in the first place. It is only ever valid to do this in your local development environment.
+ Here some useful links to fix this issue:
+
+          http://railsapps.github.io/openssl-certificate-verify-failed.html
+          https://gist.github.com/fnichol/867550
+
+
 
 
 
