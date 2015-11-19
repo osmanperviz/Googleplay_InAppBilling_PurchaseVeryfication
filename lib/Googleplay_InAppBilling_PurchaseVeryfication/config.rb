@@ -14,12 +14,16 @@ module GoogleplayInAppBillingPurchaseVeryfication
       if File.file?(secrets_path)
         secrets_config = YAML.load_file('config/secrets.yml')
         secrets_config[Rails.env].each do |key,value|
-          self.send("#{key}=",value)
+          if self.respond_to?(attribute)
+           self.send("#{key}=",value)
+          end
         end
       else
         play_config = YAML.load_file('config/google_play.yml')
         play_config[Rails.env].each do |key,value|
-          self.send("#{key}=",value)
+          if self.respond_to?(attribute)
+            self.send("#{key}=",value)
+          end
         end
       end
 
