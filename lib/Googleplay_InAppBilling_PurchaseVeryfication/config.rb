@@ -1,7 +1,7 @@
 module GoogleplayInAppBillingPurchaseVeryfication
   class FileError < StandardError; end
   class Config
-    attr_reader :app_name,:app_version,:refresh_token,:google_secret,:client_id
+    attr_accessor :app_name,:app_version,:refresh_token,:google_secret,:client_id
 
     def initialize
       play_path = File.join(Rails.root, "config", "google_play.yml")
